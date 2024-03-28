@@ -21,4 +21,7 @@ from base.views import inicio, contato
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', inicio),
+    path('contato/', contato),
+    path('reserva/', include('reserva.urls', namespace='reserva')),
 ]
